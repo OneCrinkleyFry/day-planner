@@ -10,4 +10,17 @@ var checkTime = setInterval(function() {
     }
 },  1000 * 60 * 10);
 
-$("description").click()
+
+
+$(".description").on("blur", function () {
+    var content = $(this).val().trim();
+    var index = $(this).attr("data-id");
+    hourTasks[index] = content;
+    
+    localStorage.setItem("tasks", JSON.stringify(hourTasks));
+});
+
+
+var loadTasks = function() {
+    
+}
