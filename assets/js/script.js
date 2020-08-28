@@ -12,9 +12,11 @@ var checkTime = setInterval(function() {
 
 
 
-$(".description").on("blur", function () {
-    var content = $(this).val().trim();
-    var index = $(this).attr("data-id");
+$(".saveBtn").on("click", function () {
+    var content = $(this).closest(".time-block").children("textarea").val();
+    console.log(content);
+    var index = $(this).closest(".time-block").attr("data-id");
+    console.log(index);
     hourTasks[index] = content;
     
     localStorage.setItem("tasks", JSON.stringify(hourTasks));
@@ -22,5 +24,12 @@ $(".description").on("blur", function () {
 
 
 var loadTasks = function() {
-    
+    for (let i = 0; i < hourTasks.length; i++) {
+        if (hourTasks[i]) {
+           var value = $(`textarea[data-id="${i}"]`).val(hourTasks[i]);
+           console.log(value);
+        }
+    }
 }
+
+loadTasks();
