@@ -18,7 +18,12 @@ A simple calendar app for scheduling your work day
   
 ## Screenshots
   
-  ![]()
+  ![](./assets/images/Screenshot1.png)
+  This is The app when it is first opened.
+  ![](./assets/images/Screenshot2.png)
+  This is the app with information Saved.
+  ![](./assets/images/Screenshot3.png)
+  This is the local storage after saving the information.
 
 ## Languages
   * HTML
