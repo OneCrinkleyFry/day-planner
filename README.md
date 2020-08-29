@@ -37,4 +37,8 @@ A simple calendar app for scheduling your work day
 
 Josh Miller
 
+### Where to Find it
+[This is the repository](https://github.com/sithSlave/day-planner/)
+[This is the website](https://sithslave.github.io/day-planner/)
+
 
