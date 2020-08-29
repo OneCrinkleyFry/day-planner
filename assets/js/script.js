@@ -1,4 +1,4 @@
-var hourTasks = JSON.parse(localStorage.getItem("tasks")) || ["", "", "", "", "", "", "", "", ""];
+var hourTasks = JSON.parse(localStorage.getItem("daily-tasks")) || ["", "", "", "", "", "", "", "", ""];
 
 var currentDay = moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY");
 $("#currentDay").text(currentDay);
@@ -17,14 +17,14 @@ $(".saveBtn").on("click", function () {
     var content = $(this).closest(".time-block").children("textarea").val();
     var index = $(this).closest(".time-block").attr("id");
     hourTasks[index] = content;
-    localStorage.setItem("tasks", JSON.stringify(hourTasks));
+    localStorage.setItem("daily-tasks", JSON.stringify(hourTasks));
 });
 
 $(".description").on("blur", function() {
     var content = $(this).val();
     var index = $(this).closest(".time-block").attr("id");
     hourTasks[index] = content;
-    localStorage.setItem("tasks", JSON.stringify(hourTasks));
+    localStorage.setItem("daily-tasks", JSON.stringify(hourTasks));
 });
 
 
