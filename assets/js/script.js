@@ -26,6 +26,14 @@ var loadTasks = function() {
         var slotTime = $(".container").children("#" + i).children(".description");
         slotTime.val(hourTasks[i]);
     }
+    checkTime();
+};
+
+var checkTime = function() {
+    var currentHour = moment().format("h");
+    $(".container").each(function() {
+        if (currentHour < )
+    })
 }
 
 loadTasks();
