@@ -1,11 +1,11 @@
 var hourTasks = JSON.parse(localStorage.getItem("tasks")) || ["", "", "", "", "", "", "", "", ""];
 
-var currentDay = moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY ss");
+var currentDay = moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY");
 $("#currentDay").text(currentDay);
 
 var checkTime = setInterval(function() {
     if ((moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY")) !== currentDay) {
-        currentDay = moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY ss");
+        currentDay = moment().format("[Today is] dddd [the] Do [of] MMMM, YYYY");
         $("#currentDay").text(currentDay);
     }
     loadTasks();
